@@ -12,10 +12,10 @@ const Counter: FunctionComponent<CounterProps> = ({ initialCount = 0 }) => {
 
     return (
         <div className="count">
-            <p>{count}</p>
+            <div data-testid="count-display">{count}</div>
             <div className="buttons">
-                <button onClick={decrement} >-</button>
-                <button onClick={increment} >+</button>
+                <button data-testid="button-decrement" onClick={decrement} >-</button>
+                <button data-testid="button-increment" onClick={increment} >+</button>
             </div>
         </div>
     );
